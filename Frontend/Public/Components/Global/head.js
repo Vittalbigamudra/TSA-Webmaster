@@ -1,4 +1,4 @@
-// head.js — centralized head setup and component script loader
+// head.js — centralized head setup for metadata only
 
 (function setupHead() {
   const head = document.head;
@@ -20,24 +20,6 @@
   // Optional favicon
   const favicon = document.createElement('link');
   favicon.rel = 'icon';
-  favicon.href = '/Frontend/Public/Media/favicon.ico';
+  favicon.href = '/Public/Media/favicon.ico'; // adjust path if needed
   head.appendChild(favicon);
-
-  // Component script loader
-  const componentPaths = [
-    '/Frontend/Public/Components/Global/navbar.js',
-    '/Frontend/Public/Components/Global/body.js',
-    '/Frontend/Public/Components/Global/footer.js',
-    '/Frontend/Public/Components/Home/cards.js',
-    '/Frontend/Public/Components/Home/resources.js',
-    '/Frontend/Public/Components/Home/submission.js'
-    // Add more component scripts here as needed
-  ];
-
-  componentPaths.forEach(src => {
-    const script = document.createElement('script');
-    script.src = src;
-    script.defer = true;
-    head.appendChild(script);
-  });
 })();

@@ -40,7 +40,7 @@ class HomeCard extends HTMLElement {
         }
       </style>
       <div class="text-content">
-          <h1>Highlights:</h1>
+          <h1>Highlights</h1>
       </div>
       <div class="InfoCardContainer">
         ${this.generateCards(4)}
@@ -49,7 +49,7 @@ class HomeCard extends HTMLElement {
   }
 
   generateCards(count) {
-    const imageSrc = '/Frontend/Public/Media/resourceimage.jpg';
+    const imageSrc = '../Media/resourceimage.jpg';
     const text = `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni repellat quos quae magnam iste. Quam quisquam ullam voluptatibus et est doloremque voluptatum, reprehenderit exercitationem deserunt sequi sint, non, distinctio illum.`;
 
     return Array.from({ length: count }).map(() => `
