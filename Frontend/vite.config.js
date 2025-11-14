@@ -1,23 +1,25 @@
+// vite.config.js
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  // Tell Vite your HTML entry lives in Public/Site
+  // Entry HTML lives in Public/Site
   root: resolve(__dirname, 'Public/Site'),
 
-  // Keep node_modules resolution at project root
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'Public/Components'), // optional shortcut
-    }
-  },
-
-  // Where to put the build output
+  // Build output goes to dist/
   build: {
     outDir: resolve(__dirname, 'dist'),
     emptyOutDir: true
   },
 
-  // Static assets folder (optional)
+  // Aliases for cleaner imports
+  resolve: {
+    alias: {
+      '@components': resolve(__dirname, 'Public/Components'),
+      '@media': resolve(__dirname, 'Public/Media')
+    }
+  },
+
+  // Static assets folder (served as-is at /)
   publicDir: resolve(__dirname, 'Public/Media')
 });

@@ -46,7 +46,7 @@ class HomeResources extends HTMLElement {
           </p>
         </div>
         <div class="image-content">
-          <img src="/Frontend/Public/Media/resourceimage.jpg" alt="Placeholder image" />
+          <img src="resourceimage.jpg" alt="Placeholder image" />
         </div>
       </div>
 

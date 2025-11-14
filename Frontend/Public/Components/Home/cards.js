@@ -49,7 +49,7 @@ class HomeCard extends HTMLElement {
   }
 
   generateCards(count) {
-    const imageSrc = '../Media/resourceimage.jpg';
+    const imageSrc = 'resourceimage.jpg';
     const text = `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni repellat quos quae magnam iste. Quam quisquam ullam voluptatibus et est doloremque voluptatum, reprehenderit exercitationem deserunt sequi sint, non, distinctio illum.`;
 
     return Array.from({ length: count }).map(() => `
