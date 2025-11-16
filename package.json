@@ -1,0 +1,21 @@
+{
+  "name": "tsa-webmaster",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite --config Frontend/vite.config.js",
+    "build": "vite build --config Frontend/vite.config.js",
+    "preview": "vite preview --config Frontend/vite.config.js",
+    "start": "node index.js",
+    "serve": "nodemon index.js",
+    "tree": "tree -I 'node_modules'"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5",
+    "maplibre-gl": "^5.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11",
+    "vite": "^7.2.2"
+  }
+}

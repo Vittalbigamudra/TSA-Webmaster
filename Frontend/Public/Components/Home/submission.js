@@ -49,7 +49,7 @@ class HomeSubmission extends HTMLElement {
     `;
 
     shadow.querySelector('.inviteButton').addEventListener('click', () => {
-      window.location.href = '/Frontend/Public/Site/submission.html';
+      window.location.href = 'submission.html';
     });
   }
 }
