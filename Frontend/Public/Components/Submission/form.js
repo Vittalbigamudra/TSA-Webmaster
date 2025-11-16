@@ -99,6 +99,11 @@ class SubmissionForm extends HTMLElement {
           </label>
 
           <label>
+            Community Name:
+            <input type="text" name="Comunnity" placeholder="Interesting County" required>
+          </label>
+
+          <label>
             Image URL (optional):
             <input type="url" name="image">
           </label>

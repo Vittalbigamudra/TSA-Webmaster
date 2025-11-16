@@ -15,4 +15,8 @@ import '../Components/Home/submission.js';
 import '../Components/Submission/form.js';
 
 // Import Interactive Resources 
-import '../Components/ResourceMap/map.js'
+import '../Components/Resource/map.js'
+
+// Import Highlights
+import '../Components/Highlights/main.js'
+import '../Components/Highlights/Subset.js'

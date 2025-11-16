@@ -1,25 +1,28 @@
 // vite.config.js
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import { resolve } from 'path';
 
-export default defineConfig({
-  // Entry HTML lives in Public/Site
-  root: resolve(__dirname, 'Public/Site'),
+export default defineConfig(({ mode }) => {
+  // Load env from Private folder
+  const env = loadEnv(mode, resolve(__dirname, 'Private'));
 
-  // Build output goes to dist/
-  build: {
-    outDir: resolve(__dirname, 'dist'),
-    emptyOutDir: true
-  },
+  return {
+    root: resolve(__dirname, 'Public/Site'),
+    build: {
+      outDir: resolve(__dirname, 'dist'),
+      emptyOutDir: true
+    },
+    resolve: {
+      alias: {
+        '@components': resolve(__dirname, 'Public/Components'),
+        '@media': resolve(__dirname, 'Public/Media')
+      }
+    },
+    publicDir: resolve(__dirname, 'Public/Media'),
 
-  // Aliases for cleaner imports
-  resolve: {
-    alias: {
-      '@components': resolve(__dirname, 'Public/Components'),
-      '@media': resolve(__dirname, 'Public/Media')
+    // Expose env variables to client
+    define: {
+      'import.meta.env.VITE_MAPTILER_KEY': JSON.stringify(env.VITE_MAPTILER_KEY)
     }
-  },
-
-  // Static assets folder (served as-is at /)
-  publicDir: resolve(__dirname, 'Public/Media')
+  };
 });

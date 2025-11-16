@@ -25,13 +25,17 @@ class ResourcesMap extends HTMLElement {
   }
 
   connectedCallback() {
-    this.map = new maplibregl.Map({
-      container: this.container,
-      style: this.getAttribute('style-url') || 'https://demotiles.maplibre.org/globe.json',
-      center: this.getAttribute('center') ? JSON.parse(this.getAttribute('center')) : [0, 0],
-      zoom: this.getAttribute('zoom') ? parseFloat(this.getAttribute('zoom')) : 2
-    });
-  }
+  const apiKey = import.meta.env.VITE_MAPTILER_KEY;
+  const defaultStyle = `https://api.maptiler.com/maps/streets/style.json?key=${apiKey}`;
+
+  this.map = new maplibregl.Map({
+    container: this.container,
+    style: this.getAttribute('style-url') || defaultStyle,
+    center: this.getAttribute('center') ? JSON.parse(this.getAttribute('center')) : [0, 0],
+    zoom: this.getAttribute('zoom') ? parseFloat(this.getAttribute('zoom')) : 2
+  });
+}
+
 
   disconnectedCallback() {
     if (this.map) {
