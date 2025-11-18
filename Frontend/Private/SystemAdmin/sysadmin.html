@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>System Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; background: #f6f8fa; }
+      header { background: #0f172a; color: #fff; padding: 1rem 2rem; }
+      main { padding: 1.5rem; display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+      .card { background: #fff; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.06); padding: 1rem; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>System Admin Dashboard</h1>
+    </header>
+    <main>
+      <div class="card">
+        <h2>Submissions moderation</h2>
+        <admin-submissions></admin-submissions>
+      </div>
+
+      <div class="card">
+        <h2>Highlights</h2>
+        <admin-highlights></admin-highlights>
+      </div>
+
+      <div class="card">
+        <h2>Resources</h2>
+        <admin-resources></admin-resources>
+      </div>
+
+      <div class="card">
+        <h2>Calendar</h2>
+        <admin-calendar></admin-calendar>
+      </div>
+    </main>
+
+    <!-- Load components -->
+    <script type="module" src="./SysComponents/submission.js"></script>
+    <script type="module" src="./SysComponents/highlight.js"></script>
+    <script type="module" src="./SysComponents/resources.js"></script>
+    <script type="module" src="./SysComponents/calendar.js"></script>
+  </body>
+</html>
