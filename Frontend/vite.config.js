@@ -14,7 +14,10 @@ export default defineConfig(({ mode }) => {
           main: resolve(__dirname, 'Public/Site/index.html'),
           resources: resolve(__dirname, 'Public/Site/resources.html'),
           highlights: resolve(__dirname, 'Public/Site/highlights.html'),
-          submission: resolve(__dirname, 'Public/Site/submission.html')
+          submission: resolve(__dirname, 'Public/Site/submission.html'),
+          about: resolve(__dirname, 'Public/Site/about.html'),
+          contact: resolve(__dirname, 'Public/Site/contact.html'),
+          calendar: resolve(__dirname, 'Public/Site/calendar.html')
         }
       }
     },

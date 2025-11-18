@@ -20,3 +20,12 @@ import '../Components/Resource/map.js'
 // Import Highlights
 import '../Components/Highlights/main.js'
 import '../Components/Highlights/Subset.js'
+
+// Import About Page
+import '../Components/About/about.js';
+
+// Import Contact Page
+import '../Components/Contact/contact.js';
+
+// Import Calendar
+import '../Components/Calendar/calendar.js';
