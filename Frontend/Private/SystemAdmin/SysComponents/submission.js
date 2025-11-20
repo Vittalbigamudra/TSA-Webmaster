@@ -82,7 +82,6 @@ class AdminSubmissions extends HTMLElement {
           <div><strong>Title:</strong> ${it.title}</div>
           <div><strong>Category:</strong> ${it.category}</div>
           <div><strong>Location:</strong> ${it.location}</div>
-          <div><strong>Community:</strong> ${it.community || it.Community || ''}</div>
           ${eventDate}
         </div>
         <div class="status">Approved: ${it.Approved || 'False'} | Highlight: ${it.Highlight || 'None'}</div>
@@ -134,4 +133,6 @@ class AdminSubmissions extends HTMLElement {
   }
 }
 
-customElements.define('admin-submissions', AdminSubmissions);
+if (!customElements.get('admin-submissions')) {
+  customElements.define('admin-submissions', AdminSubmissions);
+}
